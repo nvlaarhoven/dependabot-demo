@@ -1,0 +1,15 @@
+# Lightweight manual trigger to verify workflow execution from a branch
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - test-workflow
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello world"
